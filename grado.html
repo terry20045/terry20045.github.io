@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="grados.css">
+    
+</head>
+<body>
+    <div class="contenedor">
+        <form action="">
+            <p>Grado F</p>
+            <input type="text" id="numero1">
+            <p>A Grado C</p>
+            <input type="text" id="resultado" readonly>
+            <input type="button" onclick=" suma() " class="btn" value="Resultado">
+        </form>
+    </div>
+    <script>
+        function suma() {
+    var numero1  = parseFloat (document.getElementById('numero1').value);
+    var resultado = numero1 - 32 * 5 / 9;
+    
+
+    document.getElementById('resultado').value = resultado;
+
+}
+    </script>
+</body>
+</html>

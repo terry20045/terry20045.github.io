@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="materia.css">
+    <title>Materia</title>
+</head>
+<body>
+    <div class="contenedor">
+        <form action="">
+            <p>Ingrese un numero para identificar la materia</p>
+            <input type="text" id="subject">
+            <p>La materia es: </p>
+            <input type="text" id="resultado" readonly>
+            <input type="button" onclick="materia()" class="btn" value="Resultado">
+        </form>
+    </div>
+
+    <script>
+        function materia() { 
+    var materias = parseFloat(document.getElementById('subject').value);
+    switch (materias) {
+        case 1:
+            document.getElementById('resultado').value = 'Biblia';
+            break;
+        case 2:
+            document.getElementById('resultado').value = 'Biologia';
+            break;
+        case 3:
+            document.getElementById('resultado').value = 'Programacion';
+            break;
+        case 4:
+            document.getElementById('resultado').value = 'Redes Informatica';
+            break;
+        case 5:
+            document.getElementById('resultado').value = 'Math';
+            break;
+        case 6:
+            document.getElementById('resultado').value = 'Fisica Elemental';
+            break;
+        case 7:
+            document.getElementById('resultado').value = 'Diseno Web';
+            break;
+        case 8:
+            document.getElementById('resultado').value = 'Quimica';
+            break;
+        case 9:
+            document.getElementById('resultado').value = 'Mantenimiento';
+            break;
+        case 10:
+            document.getElementById('resultado').value = 'Laboratorio';
+            break;
+        case 11:
+            document.getElementById('resultado').value = 'Contabilidad';
+            break;
+        default:
+           alert('No definido en la lista');
+            break;
+    }
+    </script>
+</body>
+</html>

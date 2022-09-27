@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Promedio</title>
+</head>
+<body>
+    <div class="contenedor">
+        <form action="">
+            <P>Ingrese su nombre:</P>
+            <input type="text" id="nombre">
+            <p>Su Historia crediticia es:</p>
+            <input type="text" id="historia">
+            <p>Cantidad pedida:</p>
+            <input type="text" id="cantidad">
+            <P>Salario Anual</P>
+            <input type="text" id="salario">
+            <p>Valor de otras propiedades</p>
+            <input type="text" id="propiedades">
+            <p>resultado</p>
+            <input type="text" id="resultado" readonly>
+            <input type="button" onclick="suma()" class="btn" value="resultado">
+        </form>
+    </div>
+    <script>
+        function suma(){
+    var nombre =parseFloat
+    (document.getElementById('nombre').value);
+    var historia =parseFloat
+    (document.getElementById('historia').value);
+    var cantidad =parseFloat
+    (document.getElementById('cantidad').value);
+    var salario =parseFloat
+    (document.getElementById('salario').value)
+    var propiedades =parseFloat;
+    (document.getElementById('propiedades').value);
+    
+    if(historia  = "b")
+    document.getElementById('resultado').value = "prestamo Aprobado";
+    else
+    document.getElementById('resultado').value = "prestamo Reprobado";
+
+      if(salario = 50% cantidad)
+      document.getElementById('resultado').value = "prestamo Aprobado";
+    else
+    document.getElementById('resultado').value = "prestamo Reprobado";
+
+    }
+    
+    
+    </script>
+</body>
+</html> 

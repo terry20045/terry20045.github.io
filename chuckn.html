@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chunk Norris</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div id="display-joke">Click the button to get a new joke</div>
+      <button class="btn" id="getJoke">Get Joke</button>
+    </section>
+
+    <script>
+      const displayJoke = document.getElementById("display-joke");
+const button = document.getElementById("getJoke");
+
+button.addEventListener("click", getRandomJoke);
+
+function getRandomJoke() {
+  const ajax = new XMLHttpRequest();
+  const url = "https://api.chucknorris.io/jokes/random";
+  ajax.open("GET", url, true);
+
+  ajax.onreadystatechange = () => {
+    if (ajax.status === 200 && ajax.readyState === 4) {
+      let data = JSON.parse(ajax.responseText);
+      displayJoke.innerHTML = `${data.value}`;
+    } else {
+      ajax.onerror = onerror();
+    }
+  };
+
+  ajax.send();
+}
+
+function onerror() {
+  displayJoke.textContent = `Something Went Wrong :(`;
+}
+    </script>
+  </body>
+</html>
